@@ -33,6 +33,8 @@ router.get("/:shortId", async (req, res) => {
   if (!dest) {
     return res.sendStatus(404);
   }
+
+  await shortUrl.findByIdAndUpdate(dest._id, { countUrl: dest.countUrl + 1 });
   analytics.create({ shortUrl: dest._id });
   res.redirect(dest.destination);
 });
