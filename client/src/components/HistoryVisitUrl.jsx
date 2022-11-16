@@ -14,21 +14,25 @@ function HistoryVisitUrl() {
   return (
     <div>
       <table className="table">
-        <tr>
-          <th>Destiny</th>
-          <th>Link local</th>
-          <th>visit count</th>
-        </tr>
-
-        {historyUrl.map((item) => (
-          <tr className="text-history" key={item._id}>
-            <td>{item.destination}</td>
-            <td>
-              <a href={"http://localhost:5000/api/" + item.shortId}>Link</a>
-            </td>
-            <td>{item.countUrl}</td>
+        <thead>
+          <tr>
+            <th>Destiny</th>
+            <th>Link local</th>
+            <th>visit count</th>
           </tr>
-        ))}
+        </thead>
+
+        <tbody>
+          {historyUrl.map((item) => (
+            <tr className="text-history" key={item._id}>
+              <td>{item.destination}</td>
+              <td>
+                <a href={"http://localhost:5000/api/" + item.shortId}>Link</a>
+              </td>
+              <td>{item.countUrl}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
