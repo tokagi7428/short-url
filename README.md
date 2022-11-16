@@ -1,12 +1,17 @@
-1.0 Setup application
-1.1 Create folder server and client
-1.2 new terminal then cd server
-1.3 Initiallize project npm init -y
-1.4 Create required files
-1.5 Setup nodemon
-1.6 Install required packages
-1.7 Setup config
+#Enter to folder client
+1.cd client
 
-2.0 Add create route
-2.1 Add model
-2.2 Add route
+#install dependencies
+2.npm install
+
+#server with not reload at localhost: 3000
+3.npm run start
+
+Enter to folder server
+1.cd server
+
+#install dependencies
+2.npm install
+
+#server with not reload at localhost: 5000
+3.npm start
