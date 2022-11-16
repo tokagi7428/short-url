@@ -10,13 +10,17 @@ function App() {
   const [qrValue, setQrValue] = useState("");
 
   const onSubmitUrl = async () => {
-    const url = await axios.post("http://localhost:5000/api/url", {
-      destination: shortUrl,
-    });
-    setNewUrl(`http://localhost:5000/api/${url.data.data.shortId}`);
-    setQrValue(newUrl);
-    console.log({ newUrl });
-    setShortUrl("");
+    try {
+      const url = await axios.post("http://localhost:5000/api/url", {
+        destination: shortUrl,
+      });
+      setNewUrl(`http://localhost:5000/api/${url.data.data.shortId}`);
+      setQrValue(newUrl);
+      console.log({ url });
+      setShortUrl("");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const downloadQRCode = () => {

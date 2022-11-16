@@ -5,7 +5,7 @@ function HistoryVisitUrl() {
   const [historyUrl, setHistoryUrl] = useState([]);
   useEffect(() => {
     const getHistoryUrl = async () => {
-      const data = await axios.get("http://localhost:5000/api/url/analytics");
+      const data = await axios.get("http://localhost:5000/api/url/shortUrl");
       setHistoryUrl(data.data);
       //   console.log(historyUrl);
     };
