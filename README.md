@@ -1,17 +1,23 @@
-### Enter to folder client
-cd client
+# short-url
 
-### install dependencies
-npm install
+## Build Setup
 
-### server with not reload at localhost: 3000
-3.npm run start
+```bash
+# Enter the frontend
+$ cd frontend
+# install dependencies
+$ npm install
 
-### Enter to folder server
-cd server
+# serve with hot reload at localhost:3000
+$ npm run start
+```
 
-### install dependencies
-npm install
+```bash
+# Enter the backend
+$ cd backend
+# install dependencies
+$ npm install
 
-### server with not reload at localhost: 5000
-npm start
+# serve with hot reload at localhost:5000
+$ npm start
+```
